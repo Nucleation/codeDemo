@@ -10,10 +10,9 @@ import Foundation
 import UIKit
 
 extension NSAttributedString {
-    
+
     /// 计算size
     func size(_ size:CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)) ->CGSize{
-        
         return self.boundingRect(with: size, options: [NSStringDrawingOptions.usesLineFragmentOrigin,NSStringDrawingOptions.usesFontLeading], context: nil).size
     }
     
