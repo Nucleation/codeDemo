@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 extension String {
     
     var length:Int { return (self as NSString).length }
@@ -143,7 +144,29 @@ extension String {
             
         } catch {return self}
     }
-    
+    ///使用正则表达式替换
+    func pregReplace(pattern: String, with: String,
+                     options: NSRegularExpression.Options = []) -> String {
+        let regex = try! NSRegularExpression(pattern: pattern, options: options)
+        return regex.stringByReplacingMatches(in: self, options: [],
+                                              range: NSMakeRange(0, self.count),
+                                              withTemplate: with)
+    }
+    ///根据正则判断
+    func isMatches(pattern:String) -> Bool {
+        if isEmpty {return false}
+        do {
+            let regularExpression = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
+            let resultNum = regularExpression.numberOfMatches(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.length))
+            if resultNum > 0{
+                return true
+            }else{
+                return false
+            }
+        } catch  {
+            return false
+        }
+    }
     /// 正则搜索相关字符位置
     func matches(_ pattern:String) ->[NSTextCheckingResult] {
         
@@ -222,6 +245,7 @@ extension String {
         att.addAttributes([NSAttributedStringKey.paragraphStyle:para], range: NSMakeRange(0, self.count))
         return att
     }
+    
     
     //电话号码加*
     var phoneMash:String{

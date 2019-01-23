@@ -14,6 +14,14 @@
 		1704D73620C11A7100E3FC87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1704D73420C11A7100E3FC87 /* LaunchScreen.storyboard */; };
 		1704D74120C11A7100E3FC87 /* codeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704D74020C11A7100E3FC87 /* codeTests.swift */; };
 		1704D74C20C11A7100E3FC87 /* codeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704D74B20C11A7100E3FC87 /* codeUITests.swift */; };
+		1740C4B621F6B369001A3C7A /* Base_Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1740C4B521F6B369001A3C7A /* Base_Config.swift */; };
+		1741813F21F56B6F0045144B /* LJPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1741813E21F56B6F0045144B /* LJPlist.plist */; };
+		1741814121F592210045144B /* TextTieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741814021F592210045144B /* TextTieldViewController.swift */; };
+		1741814721F5A0A20045144B /* LoginViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741814521F5A0A20045144B /* LoginViewViewController.swift */; };
+		1741814821F5A0A20045144B /* LoginViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1741814621F5A0A20045144B /* LoginViewViewController.xib */; };
+		174894AC21F7F1C300937CF3 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174894AB21F7F1C300937CF3 /* TextViewViewController.swift */; };
+		174894AF21F7F8FD00937CF3 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174894AE21F7F8FD00937CF3 /* UITextView+Extension.swift */; };
+		174894B221F83E9700937CF3 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174894B121F83E9700937CF3 /* Notice.swift */; };
 		1755AA7221AE34C8001B52D4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755AA7121AE34C8001B52D4 /* String+Extension.swift */; };
 		1755AA7521AE3751001B52D4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755AA7421AE3751001B52D4 /* UIView+Extension.swift */; };
 		1755AA7821AE3939001B52D4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755AA7721AE3939001B52D4 /* UIImage+Extension.swift */; };
@@ -56,6 +64,14 @@
 		1704D74720C11A7100E3FC87 /* codeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1704D74B20C11A7100E3FC87 /* codeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeUITests.swift; sourceTree = "<group>"; };
 		1704D74D20C11A7100E3FC87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1740C4B521F6B369001A3C7A /* Base_Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base_Config.swift; sourceTree = "<group>"; };
+		1741813E21F56B6F0045144B /* LJPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LJPlist.plist; sourceTree = "<group>"; };
+		1741814021F592210045144B /* TextTieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTieldViewController.swift; sourceTree = "<group>"; };
+		1741814521F5A0A20045144B /* LoginViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewController.swift; sourceTree = "<group>"; };
+		1741814621F5A0A20045144B /* LoginViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewViewController.xib; sourceTree = "<group>"; };
+		174894AB21F7F1C300937CF3 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
+		174894AE21F7F8FD00937CF3 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		174894B121F83E9700937CF3 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		1755AA7121AE34C8001B52D4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		1755AA7421AE3751001B52D4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		1755AA7721AE3939001B52D4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -115,8 +131,14 @@
 		1704D72A20C11A6C00E3FC87 /* code */ = {
 			isa = PBXGroup;
 			children = (
+				174894B021F83E7800937CF3 /* Notice */,
+				1740C4B521F6B369001A3C7A /* Base_Config.swift */,
 				1704D72B20C11A6D00E3FC87 /* AppDelegate.swift */,
 				1704D72D20C11A6D00E3FC87 /* ViewController.swift */,
+				1741814021F592210045144B /* TextTieldViewController.swift */,
+				174894AB21F7F1C300937CF3 /* TextViewViewController.swift */,
+				1741814421F5A08A0045144B /* LoginVIew */,
+				1741813E21F56B6F0045144B /* LJPlist.plist */,
 				1755AA8A21AE3F17001B52D4 /* Extension */,
 				1704D72F20C11A6D00E3FC87 /* Main.storyboard */,
 				1704D73220C11A7100E3FC87 /* Assets.xcassets */,
@@ -142,6 +164,31 @@
 				1704D74D20C11A7100E3FC87 /* Info.plist */,
 			);
 			path = codeUITests;
+			sourceTree = "<group>";
+		};
+		1741814421F5A08A0045144B /* LoginVIew */ = {
+			isa = PBXGroup;
+			children = (
+				1741814521F5A0A20045144B /* LoginViewViewController.swift */,
+				1741814621F5A0A20045144B /* LoginViewViewController.xib */,
+			);
+			path = LoginVIew;
+			sourceTree = "<group>";
+		};
+		174894AD21F7F8A600937CF3 /* LJ_TextView */ = {
+			isa = PBXGroup;
+			children = (
+				174894AE21F7F8FD00937CF3 /* UITextView+Extension.swift */,
+			);
+			path = LJ_TextView;
+			sourceTree = "<group>";
+		};
+		174894B021F83E7800937CF3 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				174894B121F83E9700937CF3 /* Notice.swift */,
+			);
+			path = Notice;
 			sourceTree = "<group>";
 		};
 		1755AA7021AE3493001B52D4 /* LJ_String */ = {
@@ -212,6 +259,7 @@
 		1755AA8A21AE3F17001B52D4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				174894AD21F7F8A600937CF3 /* LJ_TextView */,
 				1755AA7321AE3727001B52D4 /* LJ_View */,
 				1755AA7021AE3493001B52D4 /* LJ_String */,
 				1755AA7621AE3839001B52D4 /* LJ_UIImage */,
@@ -329,6 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1704D73620C11A7100E3FC87 /* LaunchScreen.storyboard in Resources */,
+				1741814821F5A0A20045144B /* LoginViewViewController.xib in Resources */,
+				1741813F21F56B6F0045144B /* LJPlist.plist in Resources */,
 				1704D73320C11A7100E3FC87 /* Assets.xcassets in Resources */,
 				1704D73120C11A6D00E3FC87 /* Main.storyboard in Resources */,
 			);
@@ -355,16 +405,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1741814721F5A0A20045144B /* LoginViewViewController.swift in Sources */,
 				1704D72E20C11A6D00E3FC87 /* ViewController.swift in Sources */,
+				1740C4B621F6B369001A3C7A /* Base_Config.swift in Sources */,
 				1755AA7221AE34C8001B52D4 /* String+Extension.swift in Sources */,
+				174894AC21F7F1C300937CF3 /* TextViewViewController.swift in Sources */,
 				1755AA7821AE3939001B52D4 /* UIImage+Extension.swift in Sources */,
 				1755AA7521AE3751001B52D4 /* UIView+Extension.swift in Sources */,
 				1704D72C20C11A6D00E3FC87 /* AppDelegate.swift in Sources */,
 				1755AA7B21AE3A24001B52D4 /* NSObject+Extension.swift in Sources */,
 				1755AA7E21AE3AD8001B52D4 /* UIButton+Extension.swift in Sources */,
 				1755AA8621AE3DDA001B52D4 /* NSAttributedString+Extension.swift in Sources */,
+				174894AF21F7F8FD00937CF3 /* UITextView+Extension.swift in Sources */,
 				1755AA8121AE3BD6001B52D4 /* UIColor+Extension.swift in Sources */,
 				1755AA8921AE3E82001B52D4 /* NIbAndSB+Extension.swift in Sources */,
+				1741814121F592210045144B /* TextTieldViewController.swift in Sources */,
+				174894B221F83E9700937CF3 /* Notice.swift in Sources */,
 				1755AA8421AE3D02001B52D4 /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -140,4 +140,5 @@ extension UIView {
         maskLayer.frame = self.bounds
         maskLayer.path = maskPath.cgPath
         self.layer.mask = maskLayer
+    }
 }
