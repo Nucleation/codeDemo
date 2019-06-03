@@ -12,7 +12,7 @@ class TextViewViewController: UIViewController ,UITextViewDelegate{
     let textViewFont:UIFont = UIFont.systemFont(ofSize: 17)
     
     lazy var textView: UITextView = {
-        let textView = UITextView(frame: CGRect(x: 50, y: 100, width: 150, height: 150))
+        let textView = UITextView(frame: CGRect(x: 50, y: 500, width: 150, height: 150))
         textView.font = textViewFont
         textView.isSelectable = true
         textView.returnKeyType = .done
@@ -31,14 +31,41 @@ class TextViewViewController: UIViewController ,UITextViewDelegate{
         return colorBtn
     }()
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyBoardObserver()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(textView)
         self.view.addSubview(colorBtn)
+        self.addKeyBoardObserver()
         self.noticeText(text: "提示", fontSize: 16, obliqueness: 0)
         NotificationCenter.default.addObserver(self, selector: #selector(textViewDidChange(_:)), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
         // Do any additional setup after loading the view.
+    }
+    var moveValue:CGFloat = 0
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textView.resignFirstResponder()
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        print(self.keyBoardHeight)
+        if textView.maxY > kScreenHeight - self.keyBoardHeight{
+            moveValue = self.keyBoardHeight - (kScreenHeight - textView.maxY)
+            self.animateViewMoving(up: true, moveValue: moveValue)
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        animateViewMoving(up: false, moveValue: moveValue)
+        moveValue = 0
+    }
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:TimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+        UIView.commitAnimations()
     }
     func textViewDidChange(_ textView: UITextView) {
         if self.textView.markedTextRange != nil{

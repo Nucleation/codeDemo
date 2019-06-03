@@ -20,7 +20,6 @@ class TextTieldViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         //监听textField内容改变通知

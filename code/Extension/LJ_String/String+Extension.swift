@@ -87,28 +87,6 @@ extension String {
         return false
     }
     
-    /// MD5加密
-//    var md5:String {
-//
-//        let string = cString(using: String.Encoding.utf8)
-//
-//        let stringLength = CUnsignedInt(lengthOfBytes(using: String.Encoding.utf8))
-//
-//        let digestLength = Int(CC_MD5_DIGEST_LENGTH)
-//
-//        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
-//
-//        CC_MD5(string!, stringLength, result)
-//
-//        let hash = NSMutableString()
-//
-//        for i in 0 ..< digestLength { hash.appendFormat("%02x", result[i]) }
-//
-//        result.deinitialize()
-//
-//        return String(format: hash as String)
-//    }
-    
     /// 转JSON
     var json:Any? {
         let data = self.data(using: String.Encoding.utf8, allowLossyConversion: false)
@@ -301,5 +279,52 @@ extension String {
                 return " \(Double(Int((_distance / 10) * 10) ) / 10) km "
             }
         }
+    }
+    ///字符串截取
+    func substring(location index:Int, length:Int) -> String {
+        if self.count > index {
+            let startIndex = self.index(self.startIndex, offsetBy: index)
+            let endIndex = self.index(self.startIndex, offsetBy: index + length)
+            let subString = self[startIndex..<endIndex]
+            return String(subString)
+        } else {
+            return self
+        }
+    }
+    
+    func substring(range:NSRange) -> String {
+        if self.count > range.location {
+            let startIndex = self.index(self.startIndex, offsetBy: range.location)
+            let endIndex = self.index(self.startIndex, offsetBy: range.location + range.length)
+            let subString = self[startIndex..<endIndex]
+            return String(subString)
+        } else {
+            return self
+        }
+    }
+    ///MD5 需要导入MD5
+//
+//    func md5() -> String {
+//        let cStrl = cString(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue));
+//        let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 16);
+//        CC_MD5(cStrl, CC_LONG(strlen(cStrl!)), buffer);
+//        var md5String = "";
+//        for idx in 0...15 {
+//            let obcStrl = String.init(format: "%02x", buffer[idx]);
+//            md5String.append(obcStrl);
+//        }
+//        free(buffer);
+//        return md5String;
+//    }
+    ///单行文本Size
+    func singleLineSizeWithText(font:UIFont) -> CGSize {
+        return self.size(withAttributes: [NSAttributedString.Key.font : font])
+    }
+    
+    func singleLineSizeWithAttributeText(font:UIFont) -> CGSize {
+        let attributes = [NSAttributedString.Key.font:font]
+        let attString = NSAttributedString(string: self,attributes: attributes)
+        let framesetter = CTFramesetterCreateWithAttributedString(attString)
+        return CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRange(location: 0,length: 0), nil, CGSize(width: Double.greatestFiniteMagnitude, height: Double.greatestFiniteMagnitude), nil)
     }
 }

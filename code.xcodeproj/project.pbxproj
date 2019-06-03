@@ -14,6 +14,8 @@
 		1704D73620C11A7100E3FC87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1704D73420C11A7100E3FC87 /* LaunchScreen.storyboard */; };
 		1704D74120C11A7100E3FC87 /* codeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704D74020C11A7100E3FC87 /* codeTests.swift */; };
 		1704D74C20C11A7100E3FC87 /* codeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704D74B20C11A7100E3FC87 /* codeUITests.swift */; };
+		170CF85C21F9A8C4005D1396 /* KeyBoardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170CF85B21F9A8C4005D1396 /* KeyBoardHeight.swift */; };
+		173F783822A4FA57007E643A /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F783722A4FA56007E643A /* Array+Extension.swift */; };
 		1740C4B621F6B369001A3C7A /* Base_Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1740C4B521F6B369001A3C7A /* Base_Config.swift */; };
 		1741813F21F56B6F0045144B /* LJPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1741813E21F56B6F0045144B /* LJPlist.plist */; };
 		1741814121F592210045144B /* TextTieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741814021F592210045144B /* TextTieldViewController.swift */; };
@@ -64,6 +66,8 @@
 		1704D74720C11A7100E3FC87 /* codeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1704D74B20C11A7100E3FC87 /* codeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeUITests.swift; sourceTree = "<group>"; };
 		1704D74D20C11A7100E3FC87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170CF85B21F9A8C4005D1396 /* KeyBoardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardHeight.swift; sourceTree = "<group>"; };
+		173F783722A4FA56007E643A /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		1740C4B521F6B369001A3C7A /* Base_Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base_Config.swift; sourceTree = "<group>"; };
 		1741813E21F56B6F0045144B /* LJPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LJPlist.plist; sourceTree = "<group>"; };
 		1741814021F592210045144B /* TextTieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTieldViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,14 @@
 			path = codeUITests;
 			sourceTree = "<group>";
 		};
+		173F783622A4F908007E643A /* LJ_Array */ = {
+			isa = PBXGroup;
+			children = (
+				173F783722A4FA56007E643A /* Array+Extension.swift */,
+			);
+			path = LJ_Array;
+			sourceTree = "<group>";
+		};
 		1741814421F5A08A0045144B /* LoginVIew */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				174894B121F83E9700937CF3 /* Notice.swift */,
+				170CF85B21F9A8C4005D1396 /* KeyBoardHeight.swift */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -259,6 +272,7 @@
 		1755AA8A21AE3F17001B52D4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				173F783622A4F908007E643A /* LJ_Array */,
 				174894AD21F7F8A600937CF3 /* LJ_TextView */,
 				1755AA7321AE3727001B52D4 /* LJ_View */,
 				1755AA7021AE3493001B52D4 /* LJ_String */,
@@ -410,11 +424,13 @@
 				1740C4B621F6B369001A3C7A /* Base_Config.swift in Sources */,
 				1755AA7221AE34C8001B52D4 /* String+Extension.swift in Sources */,
 				174894AC21F7F1C300937CF3 /* TextViewViewController.swift in Sources */,
+				170CF85C21F9A8C4005D1396 /* KeyBoardHeight.swift in Sources */,
 				1755AA7821AE3939001B52D4 /* UIImage+Extension.swift in Sources */,
 				1755AA7521AE3751001B52D4 /* UIView+Extension.swift in Sources */,
 				1704D72C20C11A6D00E3FC87 /* AppDelegate.swift in Sources */,
 				1755AA7B21AE3A24001B52D4 /* NSObject+Extension.swift in Sources */,
 				1755AA7E21AE3AD8001B52D4 /* UIButton+Extension.swift in Sources */,
+				173F783822A4FA57007E643A /* Array+Extension.swift in Sources */,
 				1755AA8621AE3DDA001B52D4 /* NSAttributedString+Extension.swift in Sources */,
 				174894AF21F7F8FD00937CF3 /* UITextView+Extension.swift in Sources */,
 				1755AA8121AE3BD6001B52D4 /* UIColor+Extension.swift in Sources */,
